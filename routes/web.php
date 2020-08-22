@@ -11,6 +11,16 @@
 |
 */
 
+Route::get('salut', function() {
+    return "Salut les gens";
+});
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('salut', function() {
+        return "Salut les gens";
+    });
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
